@@ -1,0 +1,21 @@
+// COLORS
+
+$gray: #58585A;
+$blue: #009CCA;
+$green: #A5C400;
+
+.dropdown-menu{
+  left: -35px;
+  right: -35px;
+  width: auto;
+}
+
+.sf-menu > li > ul > li > ul.dropdown-menu.submenu{
+  width: 180px;
+}
+
+header{
+  > .heading-panel{
+    background-color: $gray;
+  }
+}
