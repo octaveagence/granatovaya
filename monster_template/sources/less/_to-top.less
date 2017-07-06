@@ -1,0 +1,37 @@
+/*==================     ToTop     ======================*/
+.toTop {
+  width: 40px;
+  height: 40px;
+  background: darken(@brand-primary,10%);
+  .transition(.3s);
+  .box-shadow(0px 0px 1px 0 rgba(0,0,0,.4));
+  color: #fff;
+
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+
+  display: none;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  z-index: 99999;
+  &:before{
+    line-height: 38px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  &:focus{
+    background: darken(@brand-primary,10%);
+    color: #fff;
+  }
+  &:hover {
+    .box-shadow(2px 2px 2px 0 rgba(0,0,0,.4));
+    text-decoration: none;
+  }
+}
+
+.mobile .toTop, 
+.tablet .toTop{
+  display: none!important; 
+}

@@ -1,0 +1,43 @@
+/*==================  Stuck menu  ======================*/
+@stuck-bg: rgba(16, 110, 101, 1);
+@stuck-bc: #555;
+
+.stuck_container {
+}
+
+.isStuck {
+  z-index: 999;
+  //box-shadow: 0 1px 2px #bbb;
+  background: @stuck-bg;
+  color: #fff;
+  .navbar-brand a:hover, .navbar-brand a:focus, .navbar-brand a{
+    color: #fff;
+  }
+  .navbar-default .navbar-nav > li > a,
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #fff;
+  }
+  .navbar{
+    margin-bottom: 6px;
+  }
+  .navbar-brand {
+    margin-top: 11px;
+  }
+  .navbar-nav {
+    margin-top: 17px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .isStuck {
+    display: none !important;
+  }
+}
+
+.isStuck .sf-menu ul{
+	top: 50px;
+}
+
+.isStuck .sf-menu ul ul{
+	top: 0;
+}

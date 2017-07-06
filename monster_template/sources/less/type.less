@@ -1,0 +1,909 @@
+//
+// Typography
+// --------------------------------------------------
+
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: @headings-font-family;
+  font-weight: @headings-font-weight;
+  letter-spacing: 0;
+  // color: @headings-color;  
+  margin: 0;
+}
+
+
+h1, .h1 { 
+  font-size: @font-size-h1;
+  line-height: @font-lh-h1;
+  text-transform: uppercase;
+  @media (max-width: 767px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 479px) {
+    font-size: 20px;
+  }
+  small,
+  .small {
+  }
+
+}
+h2, .h2 {
+  font-size: @font-size-h2;
+  line-height: @font-lh-h2;
+  text-transform: uppercase;
+  color: @default-dark;
+  @media (max-width: 767px) {
+    font-size: 24px;
+  }
+  @media (max-width: 479px) {
+    font-size: 20px;
+  }
+}
+
+
+h3, .h3 { 
+  font-size: @font-size-h3;
+  line-height: @font-lh-h3;
+  // small{
+  // }
+}
+
+h4, .h4 { 
+  font-size: @font-size-h4;
+  line-height: @font-lh-h4;
+}
+
+h5, .h5 { 
+  font-size: @font-size-h5;
+  line-height: @font-lh-h5;
+  text-transform: uppercase;
+  color: #4a4a4a;
+  @media (max-width: 479px) {
+    font-size: 13px;
+  }
+  &.big{
+    font-size: 15px;
+  }
+}
+h6, .h6 { 
+  font-size: @font-size-h6;
+  line-height: @font-lh-h6; 
+}
+
+
+// Body text
+// -------------------------
+
+p {
+  line-height: @line-height-base;
+  margin: 0;
+}
+
+.lead{
+ 
+}
+.big{
+  font-size: 13px;
+}
+
+// Main Layout
+// -----------------------
+.page * + blockquote{
+  margin-top: 9px;
+}
+* + .row{
+margin-top: 30px;
+}
+* + .btn{
+  margin-top: 31px;
+}
+* + .link{
+  margin-top: 12px;
+}
+* + .terms-list{
+  margin-top: 10px;
+}
+* + .marked-list{
+  margin-top: 21px;
+}
+.row + *{
+  margin-top: 30px;
+}
+h2 + *{
+//.border-bottom-sm + *{
+  margin-top: 0;
+}
+.marked-list + .link{
+  margin-top: 18px;
+}
+h2 + .post {
+//.border-bottom-sm + .post {
+  margin-top: 8px;
+}
+.post + .post{
+  margin-top: 30px;
+}
+.row + .row{
+  margin-top: 30px;
+}
+h2 + *{
+  margin-top: 10px;
+}
+img + *{
+  margin-top: 21px;
+}
+h5 + p{
+  margin-top: 2px;
+}
+h2 + P{
+  margin-top: 1px;
+}
+h2 + h5{
+  margin-top: 1px;
+}
+.page blockquote + blockquote{
+  margin-top: 24px;
+}
+p + p{
+  margin-top: 23px;
+}
+p + h5{
+  margin-top: 25px;
+}
+h2 + img{
+//.border-bottom-sm + img{
+  margin-top: 8px;
+}
+* + .offset-1{
+  margin-top: 7px;
+}
+.offset-2{
+  margin-top: -5px;
+}
+.offset-3{
+  margin-top: 15px;
+}
+.inset-1{
+  padding-left: 30px;
+  @media (max-width: 479px) {
+    padding-left: 10px;
+  }
+}
+// FA
+// -----------------------
+
+.fa{
+  line-height: inherit;
+}
+
+[class*='fa-']{
+    &:before{      
+      font-family: @fa;
+      color: inherit;
+    }     
+}
+
+// Emphasis & misc
+// -------------------------
+
+// Ex: (12px small font / 14px base font) * 100% = about 85%
+small,
+.small {
+  // font-size: floor((100% * @font-size-small / @font-size-base));
+  // font-size: inherit;
+}
+
+mark,
+.mark {
+  background-color: @brand-warning;
+  padding: .2em;
+}
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+.center-xs{
+    @media (max-width: 767px){
+        text-align: center;
+        *{
+            text-align: center;
+        }
+    }    
+}
+.center-sm{
+    @media (max-width: 991px){
+        text-align: center;
+        *{
+            text-align: center;
+        }
+    }    
+}
+.left-xs{
+    @media (max-width: 767px){
+        text-align: left;
+        *{
+            text-align: left;
+        }
+    }    
+}
+.left-sm{
+    @media (max-width: 991px){
+        text-align: left;
+        *{
+            text-align: left;
+        }
+    }    
+}
+.right-xs{
+    @media (max-width: 767px){
+        text-align: right;
+        *{
+            text-align: right;
+        }
+    }    
+}
+.right-sm{
+    @media (max-width: 991px){
+        text-align: right;
+        *{
+            text-align: right;
+        }
+    }    
+}
+
+// Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+
+.fw-l{
+  font-weight: 300;
+}
+.fw-n{
+  font-weight: 400;
+}
+.fw-m{
+  font-weight: 500;
+}
+.fw-sb{
+  font-weight: 600;
+}
+.fw-b{
+  font-weight: 700;
+}
+.fw-xb{
+  font-weight: 800;
+}
+
+
+.white{
+  color: @white-clr;
+}
+
+.txt-sec{
+  color: @secondary-clr;
+}
+
+
+// Contextual colors
+.text-muted {
+  color: @text-muted;
+}
+.text-primary {
+  color: @brand-primary;
+  &.light{
+    color: #26d9c9;
+  }
+}
+.text-success {
+  color: @brand-success;
+}
+.text-info {
+  color: @brand-info;
+}
+.text-warning {
+  color: @brand-warning;
+}
+.text-danger {
+  color: @brand-danger;
+}
+
+
+
+
+// Contextual backgrounds
+// For now we'll leave these alongside the text classes until v4 when we can
+// safely shift things around (per SemVer rules).
+.bg-primary {
+  // Given the contrast here, this is the only class to have its color inverted
+  // automatically.
+  color: #fff;
+  background: @brand-primary;
+  // .bg-variant(@brand-primary);
+  h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+    color: @white-clr;
+  }
+  .border-bottom-sm{
+    &:after{
+      background-color: @white-clr;
+    }
+  }
+  a{
+    color: @white-clr;
+  }
+  a:hover{
+    color: @default-dark;
+  }
+  .post-time{
+    background-color: @default-dark;
+    color: @white-clr;
+  }
+  .line-inset-1:before{
+    background-color: rgba(255,255,255,0.64);
+  }
+  .btn-primary{
+    background: @default-dark;
+    color: @white-clr;
+    border-color: @default-dark;
+    &:hover{
+      background: transparent;
+      color: @default-dark;
+      border-color: @white-clr;
+    }
+  }
+}
+.bg-primary-right{
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    background-color: @brand-primary;
+    right: 0;
+    left: 50%;
+    margin-left: -15px;
+    top: 0;
+    bottom: 0;
+    @media (max-width: 1199px) {
+      display: none;
+    }
+  }
+}
+.bg-secondary-right{
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    background-color: @secondary-clr;
+    right: 0;
+    left: 50%;
+    margin-left: -15px;
+    top: 0;
+    bottom: 0;
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+}
+.bg-light-right{
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    background-color: @default-lighter;
+    right: 0;
+    left: 50%;
+    margin-left: -15px;
+    top: 0;
+    bottom: 0;
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+}
+.bg-secondary-right-variant-1{
+  overflow: hidden;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    background-color: @secondary-clr;
+    right: 0;
+    left: 50%;
+    margin-left: -15px;
+    top: 0;
+    bottom: 0;
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+}
+.bg-secondary-right-variant-2{
+  overflow: hidden;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    background-color: @secondary-clr;
+    right: 0;
+    left: 41%;
+    margin-left: -12px;
+    top: 0;
+    bottom: 0;
+    @media (max-width: 991px) {
+      display: none;
+    }
+    @media (max-width: 1700px) {
+      left: 38%;
+    }
+    @media (max-width: 1300px) {
+      left: 32%;
+    }
+  }
+  .bg-secondary{
+    background-color: transparent;
+  }
+}
+.bg-md-full-width{
+  @media (max-width: 1199px) {
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -100%;
+      right: -100%;
+    }
+  }
+}
+.bg-sm-full-width{
+  @media (max-width: 991px) {
+    > *{
+      z-index: 9;
+      position: relative;
+    }
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -100%;
+      right: -100%;
+    }
+  }
+}
+
+
+.bg-sm-full-width, .bg-md-full-width{
+  &.bg-light{
+    background-color: transparent;
+    &:before {
+      background-color: #efefef;
+    }
+  }
+  &.bg-primary{
+    background-color: transparent;
+    &:before{
+      background-color: @brand-primary;
+    }
+  }
+  &.bg-secondary{
+    background-color: transparent;
+    &:before{
+      background-color: @secondary-clr;
+    }
+  }
+  &.bg-light-variant-1{
+    background-color: transparent;
+    &:before{
+      background-color: @default-lighter;
+    }
+  }
+}
+.bg-white{
+  background-color: @white-clr;
+  color: @default-dark;
+  h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+    color: @default-dark;
+  }
+}
+.bg-light{
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    background-color: #efefef;
+    right: 15px;
+    left: -15px;
+    top: 0;
+    bottom: -100%;
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+  > *{
+    position: relative;
+    z-index: 99;
+  }
+}
+.bg-light-variant-1{
+  background-color: @default-lighter;
+}
+.bg-secondary{
+  background: @secondary-clr;
+  color: @white-clr;
+  h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+    color: @white-clr;
+  }
+  .border-bottom-sm{
+    &:after{
+      background-color: @white-clr;
+    }
+  }
+  .line-inset-1{
+    &:before{
+      background-color: #b9b9b9;
+    }
+  }
+  .link{
+    color: @white-clr;
+    &:hover{
+      color: @brand-primary;
+    }
+  }
+}
+
+.bg-success {
+  background: @brand-success;
+}
+.bg-info {
+   background: @brand-info;
+}
+.bg-warning {
+   background: @brand-warning;
+}
+.bg-danger {
+  background: @brand-danger;
+}
+.bg-img-01{
+  background-image: url(../images/page-01_img01.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-img-02{
+  background-image: url(../images/page-03_img01.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-img-03{
+  background-image: url(../images/page-03_img05.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// Page header
+// -------------------------
+
+.page-header {
+  padding-bottom: ((@line-height-computed / 2) - 1);
+  margin: (@line-height-computed * 2) 0 @line-height-computed;
+  border-bottom: 1px solid @page-header-border-color;
+}
+
+
+// Lists
+// -------------------------
+
+// Unordered and Ordered lists
+ul,
+ol {
+  padding: 0;
+  letter-spacing: 0.1em;
+  list-style: none;
+  margin: 0;
+    li{
+      padding: 0;
+      list-style: none;
+      margin: 0;
+      a{
+        padding: 0;
+        list-style: none;
+        margin: 0;
+      }
+    }  
+}
+
+// List options
+
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+// Inline turns list items into inline-block
+/*=================   List Inline   =====================*/
+.list-inline {
+  .list-unstyled();
+  margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+/*=================   Lists   =====================*/
+.inline-list{
+  li{
+    display: inline-block;
+    & + li {
+      margin-left: 8px;
+    }
+  }
+}
+
+.terms-list{
+  dt + dd{
+    margin-top: 2px;
+  }
+  dd + dt{
+    margin-top: 24px;
+  }
+  dd, a{
+    letter-spacing: 0.1em;
+  }
+  dd + dd{
+    margin-top: 24px;
+  }
+  a{
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+      color: @brand-primary;
+    }
+  }
+}
+.index-list {
+  counter-reset: li;
+  text-align: left;
+
+  li {
+    position: relative;
+    text-align: left;
+    @media (max-width: 500px) {
+      .line-inset-3{
+        padding-left: 0;
+        &:before{
+          display: none;
+        }
+      }
+    }
+    @media (max-width: 450px) {
+      text-align: center;
+      .media-left{
+        padding-right: 0;
+      }
+      .line-inset-3_mod{
+        padding-right: 0;
+      }
+      .counter {
+        margin-bottom: 10px;
+      }
+    }
+    .counter {
+      &:after{
+        content: counter(li, decimal);
+        counter-increment: li;
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+    + li {
+      margin-top: 18px;
+      @media (min-width: 768px) {
+        margin-top: 25px;
+      }
+    }
+  }
+}
+.marked-list{
+  position: relative;
+  padding-left: 39px;
+  line-height: 31px;
+  letter-spacing: 0.1em;
+  &:before{
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 12px;
+    bottom: 14px;
+    width: 2px;
+    background-color: #e6e5e5;
+  }
+  li{
+    position: relative;
+    &:before{
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 27px;
+      left: -35px;
+      top: 14px;
+      background-color: #e6e5e5;
+      .transition(.2s);
+    }
+    &:after{
+      position: absolute;
+      content: "";
+      height: 9px;
+      width: 9px;
+      left: -39px;
+      top: 11px;
+      background-color: @brand-primary;
+      .border-radius(50%);
+    }
+  }
+}
+// Description Lists
+dl {
+  padding: 0;  
+  margin: 0;
+  font-style: normal;
+}
+dt,
+dd {
+  padding: 0;  
+  margin: 0;  
+}
+dt {
+}
+dd {  
+}
+
+.contct-info{
+  letter-spacing: 0.1em;
+  * + dl{
+    margin-top: 24px;
+  }
+
+  * + h5, * + .h5{
+    margin-top: 24px;
+  }
+}
+
+// Horizontal description lists
+//
+// Defaults to being stacked without any of the below styles applied, until the
+// grid breakpoint is reached (default of ~768px).
+
+.dl-horizontal {
+  dd {
+    &:extend(.clearfix all); // Clear the floated `dt` if an empty `dd` is present
+  }
+
+  @media (min-width: @grid-float-breakpoint) {
+    dt {
+      float: left;
+      width: (@dl-horizontal-offset - 20);
+      clear: left;
+      text-align: right;
+      .text-overflow();
+    }
+    dd {
+      margin-left: @dl-horizontal-offset;
+    }
+  }
+}
+
+
+// Misc
+// -------------------------
+
+// Abbreviations and acronyms
+abbr[title],
+// Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted @abbr-border-color;
+}
+.initialism {
+  font-size: 90%;
+  .text-uppercase();
+}
+
+// Blockquotes
+blockquote {
+  margin: 0;  
+  font-style: normal;
+  // font-size: @blockquote-font-size;
+  cite{
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-style: normal;
+    display: inline-block;
+    letter-spacing: 0.025em;
+  }
+  * + cite{
+      margin-top: 12px;
+    }
+  q{
+      .clearfix();
+    }
+    
+    & + blockquote{
+      margin-top: 35px;
+    }
+}
+
+
+
+// Opposite alignment of blockquote
+//
+// Heads up: `blockquote.pull-right` has been deprecated as of v3.1.0.
+.blockquote-reverse,
+blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid @blockquote-border-color;
+  border-left: 0;
+  text-align: right;
+
+  // Account for citation
+  footer,
+  small,
+  .small {
+    &:before { content: ''; }
+    &:after {
+      content: '\00A0 \2014'; // nbsp, em dash
+    }
+  }
+}
+
+// Addresses
+address { 
+  font-style: normal;
+}
+
+
+
+
+// Articles
+
+article{
+
+}
+
+
+//Figure
+//---------------
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+
+  h2 + &{
+    margin-top: 8px;
+  }
+
+  figcaption{
+    margin-top: 23px;
+  }
+
+}
