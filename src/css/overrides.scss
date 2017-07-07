@@ -4,10 +4,12 @@
 
 
 body.groupepoisson{
+  background-color: white !important;
+
   .dropdown-menu{
     left: -35px;
     right: -35px;
-    width: auto;
+    width: auto !important;
     border-top-color: $green !important;
     background-color: white !important;
 
@@ -19,7 +21,7 @@ body.groupepoisson{
   }
 
   ul.sf-menu > li > ul > li > ul.dropdown-menu.submenu{
-    width: 180px;
+    width: 180px !important;
   }
 
   ul.sf-menu li > a{
@@ -156,5 +158,10 @@ footer{
 }
 
 
+@import "components/breadcrumb";
+@import "components/button";
 @import "components/cards";
 @import "components/google-map";
+
+@import "pages/le-groupe";
+@import "pages/pole";

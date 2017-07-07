@@ -1,0 +1,9 @@
+.breadcrumb{
+  margin:0 !important;
+  a, a:visited{
+    color: $fontPrimaryColor !important;
+  }
+  a:focus, a:active, a:hover{
+    color: $blue !important;
+  }
+}

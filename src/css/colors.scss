@@ -4,3 +4,26 @@ $white: white;
 $gray: #58585A;
 $blue: #009CCA;
 $green: #A5C400;
+
+$fontPrimaryColor: #3e3d40;
+
+// Map for color loops.
+$colors: (
+  white: $white,
+  blue: $blue,
+  green: $green,
+  gray: $gray
+);
+
+// Map to get a font color for selected background.
+$fontColors: (
+  white: #3e3d40,
+  blue: $white,
+  green: $white,
+  gray: $white
+);
+
+
+$spacing: 30px;
+$smallSpacing: $spacing/2;
+$verySmallSpacing: $spacing/4;

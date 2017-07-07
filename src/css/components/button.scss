@@ -1,0 +1,35 @@
+.gp-button{
+  background-color: $gray;
+  color: $white;
+  border: 2px solid $blue;
+  padding: $verySmallSpacing $smallSpacing $verySmallSpacing $smallSpacing;
+  border-radius: 10px;
+
+  font-size: 1.6rem !important;
+  font-weight: 600;
+
+  opacity: .7 !important;
+  transition: opacity 300ms;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  &:focus, &:hover, &:active{
+    opacity: 1 !important;
+  }
+
+  @each $colorName, $color in $colors{
+    &--#{$colorName}{
+      background-color: $color !important;
+      $fontColor: map-get($fontColors, $colorName);
+      color: $fontColor !important;
+      border-color: $fontColor !important;
+    }
+  }
+
+  @each $colorName, $color in $colors{
+    &--#{$colorName}-border{
+      border-color: $color !important;
+    }
+  }
+
+
+}
