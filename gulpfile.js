@@ -56,6 +56,9 @@ gulp.task('build:html', () => {
       helpers : {
         menuActive: function(page, item){
           return page==item ? 'active' : '';
+        },
+        eq(a,b){
+          return a===b;
         }
       }
     }))
