@@ -58,6 +58,19 @@
       </header>
 
       <main>
+        {{#unless no-breadcrumb}}
+          <section class="gp-breadcrumb">
+            <div class="container">
+              <ol class="breadcrumb">
+                <li><a href="/">Accueil</a></li>
+                {{#> breadcrumb-block}}
+                  {{!-- Breadcrumb content goes here. --}}
+                {{/breadcrumb-block}}
+              </ol>
+            </div>
+          </section>
+        {{/unless}}
+
         {{#> main-block}}
           {{!-- Main content goes here. --}}
         {{/main-block}}
