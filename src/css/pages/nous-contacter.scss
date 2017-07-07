@@ -1,0 +1,12 @@
+.nous-contacter{
+  &__addresses{
+    padding: $spacing !important;
+    *{
+      color: $fontPrimaryColor;
+    }
+  }
+
+  &__form{
+    padding: $spacing !important;
+  }
+}
