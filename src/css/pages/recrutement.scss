@@ -1,0 +1,55 @@
+.recrutement{
+
+  &__nav{
+    padding: $spacing !important;
+    background: $gray !important;
+    h1, p{
+      color: $white !important;
+    }
+    p{
+      padding-top: $spacing !important;
+      text-align: center;
+    }
+    &-text{
+      padding-right:$spacing;
+    }
+    &-buttons{
+      padding-left:$spacing;
+      >a{
+        display: block;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: $spacing;
+        opacity: 1 !important;
+        text-align: center !important;
+        border-radius: 0 !important;
+      }
+    }
+  }
+
+  &__bullets{
+    padding: $spacing !important;
+    span{
+      display: block;
+      line-height: 1.8em;
+      padding-left: 2.7em;
+      padding-bottom: .8em;
+      background-image: url('/assets/picto_gp.png');
+      background-size: 1.8em auto;
+      background-repeat: no-repeat;
+
+    }
+  }
+
+  &__green-section{
+    padding: $spacing !important;
+    background-color: $green !important;
+    color: $white !important;
+  }
+
+  &__white-section{
+    padding: $spacing !important;
+    background-color: $white !important;
+    color: $gray !important;
+  }
+}

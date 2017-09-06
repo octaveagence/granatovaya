@@ -1,0 +1,165 @@
+@import "mixins.less";
+@import "variables.less";
+
+/*========================================================
+                      Contact Form
+=========================================================*/
+
+@input-height: 41px;
+@input-offset-top: 10px;
+@input-padding: 10px 40px 9px 18px;
+@input-font-family: @font-family-base;
+@input-font-size: 12px;
+@input-line-height: 18px;
+@input-color: #ededed;
+@input-border-radius: 0;
+@input-brdr: 2px solid #b9b9b9;
+@input-font-weight: 400;
+@input-background: rgba(255,255,255,0);
+
+@textarea-height: 181px;
+
+@placeholder-clr: @input-color;
+@placeholder-opacity: 1;
+
+@box-shadow-ambient: 0 0 2px 0 rgba(0,0,0, .11);
+@box-shadow-key-light: 3px 4px 5px 0 rgba(0,0,0, .11);
+
+/* MF
+========================================================*/
+.rd-mailform {
+  position: relative;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-top: 9px;
+
+  fieldset {
+    border: none;
+    line-height: 0;
+  }
+
+  * {
+    .box-sizing(border-box);
+  }
+}
+
+// .rd-mailform fieldset > label,
+.rd-mailform .form-group{
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  width: 30.1%;
+
+  & > label{
+    width: 100%;
+    font-weight: @input-font-weight;
+  }
+
+
+ & + .form-group:not(.btn-wr):not(.textarea){
+  margin-left: 27px;
+  @media (max-width: 1199px){
+      margin-left: 20px;
+  }
+   @media (max-width: 991px) {
+     margin-left: 27px;
+   }
+   &:nth-child(4){
+     margin-left: 0;
+     float: left;
+   }
+}
+
+@media (max-width: 767px){
+    width: 100%;
+    & + .form-group:not(.btn-wr):not(.textarea){
+      margin-left: 0;
+      margin-top: 15px;
+    }
+  }
+
+  &.btn-wr{
+    margin-top: 17px;
+    button{
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      .transition(.3s);
+      &:hover{
+        color: @brand-primary;
+      }
+      .reset-button();
+    }
+  }
+
+  &.textarea{
+    width: 100%;
+    margin-left: 0;
+ 
+    margin-top: 8px;
+
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  input, select, textarea {
+    display: block;
+    width: 100%;
+    margin: 0;
+    -webkit-appearance: none;
+    outline: none;
+    font-family: @input-font-family;
+    font-size: @input-font-size;
+    font-weight: @input-font-weight;
+    padding: @input-padding;
+    line-height: @input-line-height;
+    color: @input-color;
+    background: @input-background;
+    border: none;
+    border: @input-brdr;
+    .border-radius(@input-border-radius);
+
+    &:-moz-placeholder {
+      color: @placeholder-clr;
+      opacity: @placeholder-opacity;
+    }
+
+    &::-webkit-input-placeholder {
+      color: @placeholder-clr;
+      opacity: @placeholder-opacity;
+    }
+
+    &::-moz-placeholder {
+      color: @placeholder-clr;
+      opacity: @placeholder-opacity;
+    }
+
+    &:-ms-input-placeholder {
+      color: @placeholder-clr;
+      opacity: @placeholder-opacity;
+    }
+  }
+
+  textarea {
+    resize: none;
+    overflow: auto;
+    height: @textarea-height;
+    border: @input-brdr;
+  }
+
+  @media (max-width: 1365px) {
+    margin-top: 30px;
+  }
+}
+
+@import "mailform_modules/_mf-animation.less";
+@import "mailform_modules/_mf-placeholder.less";
+@import "mailform_modules/_mf-validation.less";
+@import "mailform_modules/_mf-submit.less";
+//@import "mailform_modules/_mf-icon.less";
+//@import "mailform_modules/_mf-select.less";
+//@import "mailform_modules/_mf-datepicker.less";

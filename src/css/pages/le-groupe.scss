@@ -1,0 +1,104 @@
+.le-groupe{
+
+
+  &__qui-sommes-nous{
+    background: $gray !important;
+    h1, h5, p{
+      color: $white !important;
+    }
+    h5{
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+    p{
+      text-align: justify;
+    }
+  }
+
+  &__historique{
+    background: $green !important;
+    h1, h5, p{
+      color: $fontPrimaryColor !important;
+    }
+    h5{
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+    p{
+      text-align: justify;
+    }
+  }
+
+  &__infographie{
+    background: $white !important;
+    h1, h5, p{
+      color: $fontPrimaryColor !important;
+    }
+    h5{
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+    p{
+      text-align: justify;
+    }
+  }
+
+  &__implantations{
+    background: $blue !important;
+    h1, h5, p{
+      color: $white !important;
+    }
+    h5{
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+    p{
+      text-align: justify;
+    }
+  }
+
+  &__contact{
+    background: $white !important;
+    h1, h5, p{
+      color: $fontPrimaryColor !important;
+    }
+  }
+
+  &__on-en-parle{
+    background: #f2f2f2 !important;
+    h2, h5, p{
+      color: $fontPrimaryColor !important;
+    }
+    h5{
+      padding-top: .8em;
+      padding-bottom: .3em;
+    }
+    p{
+      text-align: justify;
+    }
+    h5, p{
+      padding-left: 15%;
+      padding-right: 10%;
+    }
+    &-text-block{
+      padding: $smallSpacing $spacing $smallSpacing $spacing;
+    }
+    &-image{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    &-image-block{
+      position: relative;
+      padding-right: $spacing;
+    }
+    &-button-wrapper{
+      position: absolute;
+      padding-bottom: $smallSpacing;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-align: center;
+    }
+  }
+}

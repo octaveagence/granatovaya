@@ -1,0 +1,13 @@
+.gp-breadcrumb{
+
+  .breadcrumb{
+    margin:0 !important;
+    background-color: $white !important;
+    a, a:visited{
+      color: $fontPrimaryColor !important;
+    }
+    a:focus, a:active, a:hover{
+      color: $blue !important;
+    }
+  }
+}

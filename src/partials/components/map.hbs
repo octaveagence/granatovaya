@@ -1,0 +1,62 @@
+<section class="">
+  <div id="map" class="gp-google-map"></div>
+</section>
+<script>
+  function initMap() {
+    var siege = {
+      lat: 48.7321012,
+      lng: 2.7276595
+    };
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: siege,
+      scrollwheel: false,
+      styles: [{
+          "featureType": "all",
+          "elementType": "all",
+          "stylers": [{
+              "visibility": "on"
+            },
+            {
+              "hue": "#006699"
+            },
+            {
+              "saturation": -18
+            },
+            {
+              "lightness": 47
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "all",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        },
+        {
+          "featureType": "landscape",
+          "elementType": "all",
+          "stylers": [{
+            "visibility": "simplified"
+          }]
+        },
+        {
+          "featureType": "administrative.country",
+          "elementType": "all",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        }
+      ]
+    });
+    var marker = new google.maps.Marker({
+      position: siege,
+      map: map,
+      icon: '/assets/gmap_marker_active.png',
+    });
+  }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeXPsAHw057Ex9wqRO5PVC6mDJLLg4VvU&callback=initMap">
+</script>

@@ -1,0 +1,38 @@
+{{!-- pages/page-one.hbs --}}
+
+{{#> layouts/base menu="contact" title="Groupe Poisson - Contactez-nous !" }}
+
+  {{#*inline "breadcrumb-block"}}
+    <li><a href="#">Le Groupe</a></li>
+  {{/inline}}
+
+  {{#*inline "main-block"}}
+
+    {{> components/map}}
+
+
+<section class="bg-secondary-right-variant-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 nous-contacter__addresses">
+        <h2>Adresses</h2>
+        {{>components/address site="gretz"}}
+        {{>components/address site="brillon"}}
+        {{>components/address site="roquemaure"}}
+        {{>components/address site="grand-fougeray"}}
+      </div>
+      <div class="col-md-8 nous-contacter__form offset-none bg-sm-full-width bg-secondary">
+          <h2>Contact</h2>
+          [[FORM GLIMMER COMPONENT]]
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+      
+  {{/inline}}
+{{/layouts/base}}

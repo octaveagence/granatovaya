@@ -1,0 +1,170 @@
+@import 'media';
+
+@import 'colors';
+
+
+body.groupepoisson{
+  background-color: white !important;
+
+  .dropdown-menu{
+    left: -35px;
+    right: -35px;
+    width: auto !important;
+    border-top-color: $green !important;
+    background-color: white !important;
+
+    > li > a:focus,
+    > li > a:hover,
+    > li.sfHover > a{
+      background-color: $green !important;
+    }
+  }
+
+  ul.sf-menu > li > ul > li > ul.dropdown-menu.submenu{
+    width: 180px !important;
+  }
+
+  ul.sf-menu li > a{
+    &, &:hover, &:active, &:visited{
+      color: $blue !important;
+    }
+    &:hover{
+      border-color: $green !important;
+    }
+  }
+  ul.sf-menu li.active > a,
+  ul.sf-menu li.sfHover > a,{
+    &, &:hover, &:active, &:visited{
+      color: $blue !important;
+      border-color: $green !important;
+    }
+  }
+
+  header{
+    border-bottom: 3px solid $blue !important;
+
+    > .heading-panel{
+      background-color: $gray;
+    }
+
+    .navbar{
+        margin-bottom: 12px !important;
+    }
+  }
+
+  h1.navbar-brand{
+
+    margin-top: 10px;
+    height: 60px;
+    overflow: hidden;
+
+    .navbar-brand__logo-groupe-poisson{
+      background-image: url('/assets/logos/groupe_poisson.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      height:60px;
+      width:250px;
+    }
+  }
+
+  .stuck_container.isStuck{
+    background-color: white !important;
+    border-bottom: 3px solid $blue !important;
+
+
+
+    .navbar{
+      margin-bottom: 0 !important;
+    }
+
+    h1.navbar-brand{
+
+      margin-top: 0;
+      height: 60px;
+      overflow: hidden;
+
+      .navbar-brand__logo-groupe-poisson{
+        background-image: url('/assets/logos/groupe_poisson.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        height:60px;
+        width:250px;
+      }
+    }
+  }
+}
+
+
+footer{
+  margin:0 !important;
+  padding: 0 !important;
+  >section.footer__main-links{
+    background-color: $blue !important;
+    >.container{
+      >p{
+        text-align: center;
+        >a{
+          display: inline-block !important;
+          padding: 5px 10px 5px 10px !important;
+          text-transform: none;
+          &, &:visited{
+            color: white !important;
+          }
+          &:focus, &:hover{
+            color: $gray !important;
+          }
+        }
+      }
+    }
+  }
+
+  >section.footer__secondary-links{
+    background-color: $gray !important;
+    >.container{
+      >p{
+        text-align: center;
+        >a{
+          display: inline-block !important;
+          padding: 5px 10px 5px 10px !important;
+          text-transform: none;
+          font-size: 10px;
+          &, &:visited{
+            color: white !important;
+          }
+          &:focus, &:hover{
+            color: white !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.toTop{
+  &, &:hover, &:visited, &:focus{
+    background-color: $blue !important;
+    color: white !important;
+  }
+}
+
+
+
+.bg-white{
+  background-color: white !important;
+  color: #3E3D40 !important;
+}
+
+
+@import "components/address";
+@import "components/breadcrumb";
+@import "components/button";
+@import "components/cards";
+@import "components/google-map";
+
+@import "pages/le-groupe";
+@import "pages/nous-contacter.scss";
+@import "pages/pole";
+@import "pages/recrutement";

@@ -1,0 +1,27 @@
+{
+  "name": "granatovaya",
+  "version": "1.0.0",
+  "description": "Groupe Poisson website generator.",
+  "main": "index.js",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-rename": "^1.2.2",
+    "firebase-tools": "^3.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CyprienPoisson/granatovaya.git"
+  },
+  "author": "3H15 - Cyprien Poisson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CyprienPoisson/granatovaya/issues"
+  },
+  "homepage": "https://github.com/CyprienPoisson/granatovaya#readme"
+}
