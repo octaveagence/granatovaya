@@ -1,12 +1,9 @@
 language: node_js
 node_js:
-  - "6.11.2"
-install:
-  - npm install
-  - npm install -g firebase-tools
+  - "8"
+cache:
+  yarn: true
 script:
-  - echo "Building"
   - gulp build:full
-  - echo "Deploying"
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN_DEV
