@@ -6,4 +6,5 @@ cache:
 script:
   - gulp build:full
 after_success:
+  - firebase use prod
   - firebase deploy --token $FIREBASE_TOKEN_DEV
