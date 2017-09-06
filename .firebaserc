@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "granatovaya-dev"
+    "dev": "granatovaya-dev",
+    "prod": "granatovaya-prod"
   }
 }
