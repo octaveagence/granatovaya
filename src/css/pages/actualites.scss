@@ -1,0 +1,7 @@
+.actualites{
+  &__title-section{
+    @extend .title-section;
+    background-color: $green;
+    color: $white;
+  }
+}

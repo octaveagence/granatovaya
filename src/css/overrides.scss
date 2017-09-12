@@ -5,6 +5,11 @@
 
 body.groupepoisson{
   background-color: white !important;
+  font-size: 18px;
+
+  @include mobile{
+    font-size: 12px !important;
+  }
 
   .dropdown-menu{
     left: -35px;
@@ -94,68 +99,80 @@ body.groupepoisson{
       }
     }
   }
-}
 
-
-footer{
-  margin:0 !important;
-  padding: 0 !important;
-  >section.footer__main-links{
-    background-color: $blue !important;
-    >.container{
-      >p{
-        text-align: center;
-        >a{
-          display: inline-block !important;
-          padding: 5px 10px 5px 10px !important;
-          text-transform: none;
-          &, &:visited{
-            color: white !important;
+  footer{
+    margin:0 !important;
+    padding: 0 !important;
+    >section.footer__main-links{
+      background-color: $blue !important;
+      >.container{
+        >p{
+          text-align: center;
+          >a{
+            display: inline-block !important;
+            padding: 5px 10px 5px 10px !important;
+            text-transform: none;
+            &, &:visited{
+              color: white !important;
+            }
+            &:focus, &:hover{
+              color: $gray !important;
+            }
           }
-          &:focus, &:hover{
-            color: $gray !important;
+        }
+      }
+    }
+  
+    >section.footer__secondary-links{
+      background-color: $gray !important;
+      >.container{
+        >p{
+          text-align: center;
+          >a{
+            display: inline-block !important;
+            padding: 5px 10px 5px 10px !important;
+            text-transform: none;
+            font-size: 10px;
+            &, &:visited{
+              color: white !important;
+            }
+            &:focus, &:hover{
+              color: white !important;
+            }
           }
         }
       }
     }
   }
+  
+  .toTop{
+    &, &:hover, &:visited, &:focus{
+      background-color: $blue !important;
+      color: white !important;
+    }
+  }
+  
+  .bg-white{
+    background-color: white !important;
+    color: #3E3D40 !important;
+  }
 
-  >section.footer__secondary-links{
-    background-color: $gray !important;
-    >.container{
-      >p{
-        text-align: center;
-        >a{
-          display: inline-block !important;
-          padding: 5px 10px 5px 10px !important;
-          text-transform: none;
-          font-size: 10px;
-          &, &:visited{
-            color: white !important;
-          }
-          &:focus, &:hover{
-            color: white !important;
-          }
-        }
-      }
+
+  h1{
+    text-transform: none !important;
+  }
+
+  .breadcrumb{
+    font-size: 14px !important;
+    @include mobile{
+      display: none;
     }
   }
 }
 
 
-.toTop{
-  &, &:hover, &:visited, &:focus{
-    background-color: $blue !important;
-    color: white !important;
-  }
-}
 
 
-
-.bg-white{
-  background-color: white !important;
-  color: #3E3D40 !important;
-}
 
 
 @import "components/address";
@@ -163,7 +180,9 @@ footer{
 @import "components/button";
 @import "components/cards";
 @import "components/google-map";
+@import "components/title-section";
 
+@import "pages/actualites";
 @import "pages/le-groupe";
 @import "pages/nous-contacter.scss";
 @import "pages/offre-emploi";
