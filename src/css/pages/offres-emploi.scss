@@ -1,0 +1,83 @@
+.offres-emploi{
+  &__title-section{
+    padding-top: $spacing;
+    background-color: white;
+    margin-bottom: $spacing;
+  }
+  &__form-section{
+    padding-top: $spacing;
+    background-color: $gray;
+    color: white;
+    padding-bottom: $spacing;
+  }
+}
+
+.offers-list{
+  padding-top: $spacing;
+  padding-bottom: $spacing;
+  &__offer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 3px solid $gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: $smallSpacing;
+    padding-bottom: $smallSpacing;
+    @include mobile{
+      flex-direction: column;
+      margin-top: $spacing;
+      margin-bottom: $spacing;
+    }
+  }
+  &__entity{
+    flex: 0 0 auto;
+    width: 25%;
+    padding-left: $smallSpacing;
+    padding-right: $smallSpacing;
+    & > img{
+      max-height: 3em;
+    }
+    @include mobile{
+      width: 100%;
+      text-align: center;
+      & > img{
+        max-height: 5em;
+      }
+    }
+  }
+  &__content{
+    flex: 1 1 auto;
+    padding-left: $smallSpacing;
+    padding-right: $smallSpacing;
+    width: 55%;
+    text-align: left;
+    @include mobile{
+      width: 100%;
+      padding-top: $smallSpacing;
+      padding-bottom: $smallSpacing;
+      text-align: center;
+    }
+  }
+  &__label{
+    font-size: 150%;
+    font-weight: 400;
+  }
+  &__details{
+    font-size: 100%;
+    font-weight: 300;
+    @include mobile{
+      font-size: 120%;
+    }
+  }
+  &__link{
+    flex: 0 0 auto;
+    padding-left: $smallSpacing;
+    padding-right: $smallSpacing;
+    @include mobile{
+      transform: scale(1.5);
+      padding-top: $smallSpacing;
+      padding-bottom: $smallSpacing;
+    }
+  }
+}
