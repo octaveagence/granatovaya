@@ -16,6 +16,12 @@
     opacity: 1 !important;
   }
 
+  &--small{
+    font-size: 1.3rem !important;
+    font-weight: 600;
+    letter-spacing: -0.05em !important;
+  }
+
   @each $colorName, $color in $colors{
     &--#{$colorName}{
       background-color: $color !important;

@@ -3,7 +3,7 @@ $medium-width: 992px;
 $large-width: 1200px;
 
 @mixin mobile {
-  @media (max-width: #{$medium-width - 1px}) {
+  @media (max-width: #{$small-width}) {
     @content;
   }
 }

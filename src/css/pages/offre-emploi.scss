@@ -1,0 +1,18 @@
+.offre-emploi{
+  &__title-section{
+    padding-top: 2*$spacing;
+    padding-bottom: 2*$spacing;
+    background-color: $blue;
+    color: white;
+    margin-bottom: $spacing;
+    & h1{
+      font-size: 24px;
+    }
+  }
+  &__form-section{
+    padding-top: $spacing;
+    background-color: $gray;
+    color: white;
+    padding-bottom: $spacing;
+  }
+}
